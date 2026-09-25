@@ -17,6 +17,7 @@ const { createObjectStore } = require('../lib/s3-stub');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data');
+const SAMPLE_SRC = path.join('/workspace', '4-Corporate-Plaza-Suite-240-OM.pdf');
 
 async function makeTinyOm() {
   const doc = await PDFDocument.create();
@@ -76,8 +77,16 @@ async function main() {
   await db.init();
   const store = await createObjectStore(DATA_DIR);
 
-  const pdfBuf = await makeTinyOm();
-  console.log('Generated tiny 3-page sample OM PDF');
+  let pdfBuf;
+  let originalName = 'sample-om-demo.pdf';
+  if (fs.existsSync(SAMPLE_SRC)) {
+    pdfBuf = fs.readFileSync(SAMPLE_SRC);
+    originalName = '4-Corporate-Plaza-Suite-240-OM.pdf';
+    console.log('Using existing sample OM PDF from /workspace');
+  } else {
+    pdfBuf = await makeTinyOm();
+    console.log('Generated tiny 3-page sample OM PDF');
+  }
 
   const objectKey = crypto.randomUUID();
   await store.put(objectKey, pdfBuf);
@@ -89,7 +98,7 @@ async function main() {
     requireNda: true,
     expiryHours: 72,
     active: true,
-    originalName: 'sample-om-demo.pdf',
+    originalName,
     sizeBytes: pdfBuf.length,
     createdAt: Date.now(),
   };
