@@ -1,0 +1,110 @@
+/* CRE Chad Nasir — shared design tokens
+   Import: @import url('/path/to/design-toolkit/tokens/tokens.css');
+   Or copy :root block into Office add-in CSS (Deal Quill). */
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap');
+
+:root {
+  /* Colors — brand */
+  --color-navy: #0B2C5F;
+  --color-navy-deep: #071F42;
+  --color-navy-mid: #163A6B;
+  --color-navy-soft: #E8EEF6;
+  --color-orange: #FF6A00;
+  --color-orange-hover: #E55F00;
+  --color-orange-press: #CC5400;
+  --color-orange-soft: #FFF0E6;
+  --color-orange-ring: rgba(255, 106, 0, 0.35);
+
+  /* Colors — text / chrome */
+  --color-ink: #1A1F2E;
+  --color-muted: #5A6478;
+  --color-muted-2: #8A97AB;
+  --color-line: #D8DEE8;
+  --color-line-strong: #CFD8E6;
+
+  /* Colors — feedback */
+  --color-success: #059669;
+  --color-success-soft: #D1FAE5;
+  --color-danger: #C0392B;
+  --color-danger-soft: #FDECEA;
+  --color-warning: #D97706;
+  --color-warning-soft: #FEF3C7;
+  --color-info: #2563EB;
+  --color-info-soft: #EEF3FB;
+
+  /* Surfaces */
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FAFBFD;
+  --color-page: #F4F6F9;
+  --color-white: #FFFFFF;
+
+  /* Legacy aliases (Deal Quill / OM portal compatibility) */
+  --navy: var(--color-navy);
+  --navy-deep: var(--color-navy-deep);
+  --navy-mid: var(--color-navy-mid);
+  --navy-soft: var(--color-navy-soft);
+  --orange: var(--color-orange);
+  --orange-hover: var(--color-orange-hover);
+  --orange-press: var(--color-orange-press);
+  --orange-soft: var(--color-orange-soft);
+  --orange-ring: var(--color-orange-ring);
+  --ink: var(--color-ink);
+  --muted: var(--color-muted);
+  --line: var(--color-line);
+  --danger: var(--color-danger);
+  --danger-soft: var(--color-danger-soft);
+  --ok: var(--color-success);
+  --ok-soft: var(--color-success-soft);
+  --page: var(--color-surface);
+  --bg: var(--color-page);
+  --text: var(--color-ink);
+  --border: var(--color-line);
+  --card: var(--color-surface);
+
+  /* Typography */
+  --font-ui: "Instrument Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Source Serif 4", "Instrument Serif", Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font: var(--font-ui);
+  --serif: var(--font-serif);
+
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+
+  /* Spacing — 4/8/12/16/24/32/48 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space: 8px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  --radius: var(--radius-md);
+
+  /* Shadows — soft navy elevations */
+  --shadow-sm: 0 1px 2px rgba(11, 44, 95, 0.05), 0 1px 1px rgba(11, 44, 95, 0.03);
+  --shadow-md: 0 2px 8px rgba(11, 44, 95, 0.07), 0 1px 2px rgba(11, 44, 95, 0.04);
+  --shadow-lg: 0 4px 8px rgba(11, 44, 95, 0.04), 0 12px 40px rgba(11, 44, 95, 0.10);
+  --shadow-xl: 0 8px 16px rgba(11, 44, 95, 0.06), 0 24px 64px rgba(11, 44, 95, 0.12);
+  --shadow-header: 0 2px 10px rgba(7, 31, 66, 0.28);
+  --shadow-card: var(--shadow-md);
+  --shadow: var(--shadow-lg);
+
+  --trans: 150ms ease;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
