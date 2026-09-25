@@ -3,6 +3,7 @@ data/
 uploads/
 .env
 .env.local
+# Keep .env.local mode 600 (chmod 600) — never world-readable secrets
 .env.*.local
 *.log
 .DS_Store
@@ -10,5 +11,6 @@ uploads/
 watermark-cache/
 .qa/
 .push*.json
-_qa_*.html
 .mcp-*.json
+.pack*.json
+qa-shots/*.png
