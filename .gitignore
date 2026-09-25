@@ -1,0 +1,14 @@
+node_modules/
+data/
+uploads/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+.tmp/
+watermark-cache/
+.qa/
+.push*.json
+_qa_*.html
+.mcp-*.json
