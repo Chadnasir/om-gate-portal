@@ -1,0 +1,7 @@
+/* OM Gate — brand chrome
+   Tokens: design-toolkit/tokens (synced to ./tokens.css). No invented brand colors.
+   Figma: none provided — tokens.css is source of truth. */
+
+@import url("./tokens.css");
+@import url("./brand-core.css");
+@import url("./brand-more.css");
